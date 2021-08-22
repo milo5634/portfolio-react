@@ -5,6 +5,8 @@ import Home from './pages/Home';
 import { Project1, Project2, Project3, Project4 } from './pages/Projects';
 
 const App = () => {
+  const location = useLocation();
+  const 
   return (
     <Switch>
       <Route exact path="/" component={Home} />
