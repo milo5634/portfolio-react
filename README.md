@@ -3,7 +3,7 @@
 - Création des pages (Contact/Home/Project
 - components 
 - des styles.
-- 
+
 ## Bdd interne
 
 Utilisation de data préétablie pour créer le contenu du portfolio. Stocké dans "data" puis importé pour utilisation.
@@ -12,6 +12,11 @@ Utilisation de data préétablie pour créer le contenu du portfolio. Stocké da
 
 - Mise en avant des données personnelles avec possibilité de les copier pour le visiteur grâce à "react-copy-to-clipboard"
 - Création d’un formulaire et utilisation de emailJS pour relier le formulaire à une boite mail existante. 
+
+## Ajout d'effet de transition suplementaire
+
+- Utilisation du scroll pour se deplacer entre les pages (useLocation/useHistory)
+- Utilisation de framerjs rect : framer-motion pour créer un effet lors des transitions entre les pages.
 
 
 
