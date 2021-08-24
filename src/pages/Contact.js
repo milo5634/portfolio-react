@@ -6,12 +6,37 @@ import SocialNetwork from "../components/SocialNetwork";
 import ButtonsButtom from "../components/ButtonsButtom";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import ContactForm from "../components/ContactForm";
+import { motion } from "framer-motion";
 
 const Contact = () => {
+
+/* transition entre les pages */
+const variants = {
+  initial: {
+    opacity: 0,
+    transition: { duration: 0.5 },
+    x: 200,
+  },
+  visible: {
+    opacity: 1,
+    x: 0,
+  },
+  exit: {
+    opacity: 0.4,
+    transition: { duration: 0.35 },
+    x: -800,
+  },
+};
+
   return (
     <main>
       <Mouse />
-      <div className="contact">
+      <motion.div className="contact"
+      initial="initial"
+      animate="visible"
+      exit="exit"
+      variants={variants}>
+        
         <Navigation />
               <Logo />
               <ContactForm />
@@ -60,7 +85,7 @@ const Contact = () => {
           <SocialNetwork />
         </div>
         <ButtonsButtom left={"/project-4"} right={"/"} />
-      </div>
+      </motion.div>
     </main>
   );
 };
